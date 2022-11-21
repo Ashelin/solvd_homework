@@ -2,10 +2,10 @@ package Football;
 
 public class Main {
     public static void main(String[] args) {
-        FootballMatch();
+        footballMatch();
     }
 
-    public static void FootballMatch(){
+    public static void footballMatch() {
         Coach coachLiverpool = new Coach("Joseph", "Fagan");
         Coach coachJuventus = new Coach("Giovanni", "Trapattoni");
 
@@ -14,9 +14,9 @@ public class Main {
 
         Stadium stadium = new Stadium("King Baudouin Stadium", "Belgium", 50_093);
 
-        Date date = new Date(29,05,1985);
+        Date date = new Date(29, 05, 1985);
 
-        Score score = new Score(1,0);
+        Score score = new Score(1, 0);
 
         Goal goal = new Goal("Platini", 58);
 
