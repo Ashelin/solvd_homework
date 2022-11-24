@@ -1,28 +1,18 @@
 package Football;
 
-public class Commentator {
-
-    private String firstName;
-    private String lastName;
-
+public class Commentator extends Person {
+    private String broadcast;
     public Commentator(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        super(firstName, lastName);
     }
-
-    public String getFirstName() {
-        return firstName;
+    public Commentator(String firstName, String lastName, String broadcast) {
+        super(firstName, lastName);
+        this.broadcast = broadcast;
     }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public String getBroadcast() {
+        return broadcast;
     }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setBroadcast(String broadcast) {
+        this.broadcast = broadcast;
     }
 }

@@ -1,41 +1,20 @@
 package Football;
 
-public class Player {
-    private String firstName;
-    private String lastName;
+public class Player extends Person {
     private String role;
     private int number;
+    public Player(String firstName, String lastName) {
+        super(firstName, lastName);
+    }
 
-    public Player(String firstName, String lastName, int number, String role) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.number = number;
+    public Player(String firstName, String lastName, String role) {
+        super(firstName, lastName);
         this.role = role;
     }
 
-
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
+    public Player(String firstName, String lastName, String role, int number) {
+        super(firstName, lastName);
+        this.role = role;
         this.number = number;
     }
 
@@ -45,5 +24,13 @@ public class Player {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }

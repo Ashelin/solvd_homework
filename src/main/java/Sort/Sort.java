@@ -5,27 +5,26 @@ class Sort {
         int arr[] = {1211, -34, 14, 624, -1, 0, 23, 77, 23425, -213156, 13413};
 
         System.out.println("Array:");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+        showArray(arr);
         System.out.println();
 
         bubbleSort(arr);
 
         System.out.println("Array After Bubble Sort:");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+        showArray(arr);
         System.out.println();
 
         bubbleSortRev(arr);
 
         System.out.println("Array After Reversed Bubble Sort:");
+        showArray(arr);
+    }
+
+    static void showArray(int[] arr){
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
     }
-
     static void bubbleSort(int[] arr) {
         int temp = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -35,7 +34,6 @@ class Sort {
                     arr[j - 1] = arr[j];
                     arr[j] = temp;
                 }
-
             }
         }
     }
@@ -49,7 +47,6 @@ class Sort {
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
-
             }
         }
     }

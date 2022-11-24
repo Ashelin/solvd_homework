@@ -6,8 +6,9 @@ public class Main {
     }
 
     public static void footballMatch() {
-        Coach coachLiverpool = new Coach("Joseph", "Fagan");
-        Coach coachJuventus = new Coach("Giovanni", "Trapattoni");
+        Coach coachLiverpool = new Coach("Joseph", "Fagan", "Liverpool");
+        Coach coachJuventus = new Coach("Giovanni", "Trapattoni", "Juventus");
+        Coach coachJuventus1 = new Coach("Giovannif", "Trapattoni", "Juventus");
 
         FootballTeam liverpool = new FootballTeam("Liverpool", 1892, "England");
         FootballTeam juventus = new FootballTeam("Juventus", 1897, "Italy");
@@ -24,5 +25,7 @@ public class Main {
         System.out.println(goal.getPlayerName() + " " + goal.getGoalTime());
         System.out.println(stadium.getName());
         System.out.println(date.getDay() + "." + date.getMonth() + "." + date.getYear());
+        System.out.println(coachJuventus.equals(coachJuventus));
+        System.out.println(coachJuventus1.hashCode());
     }
 }
