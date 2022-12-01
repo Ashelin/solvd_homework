@@ -2,7 +2,7 @@ package Sort;
 
 class Sort {
     public static void main(String[] args) {
-        int arr[] = {1211, -34, 14, 624, -1, 0, 23, 77, 23425, -213156, 13413};
+        int[] arr = {1211, -34, 14, 624, -1, 0, 23, 77, 23425, -213156, 13413};
 
         System.out.println("Array:");
         showArray(arr);
@@ -21,8 +21,8 @@ class Sort {
     }
 
     static void showArray(int[] arr){
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
     }
     static void bubbleSort(int[] arr) {

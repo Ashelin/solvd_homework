@@ -1,28 +1,29 @@
 package Football;
 
-public class Player extends Person {
-    private String role;
+public class Player extends Person implements IAction {
+    private PlayerRole role;
     private int number;
+
     public Player(String firstName, String lastName) {
         super(firstName, lastName);
     }
 
-    public Player(String firstName, String lastName, String role) {
+    public Player(String firstName, String lastName, PlayerRole role) {
         super(firstName, lastName);
         this.role = role;
     }
 
-    public Player(String firstName, String lastName, String role, int number) {
+    public Player(String firstName, String lastName, PlayerRole role, int number) {
         super(firstName, lastName);
         this.role = role;
         this.number = number;
     }
 
-    public String getRole() {
+    public PlayerRole getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(PlayerRole role) {
         this.role = role;
     }
 
@@ -32,5 +33,15 @@ public class Player extends Person {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    @Override
+    public String action() {
+        return "Starts playing...";
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " " + this.getRole();
     }
 }
