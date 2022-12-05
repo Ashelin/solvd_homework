@@ -1,4 +1,7 @@
-package Football;
+package Entity;
+
+import Football.IAction;
+import Football.PlayerRole;
 
 public class Player extends Person implements IAction {
     private PlayerRole role;

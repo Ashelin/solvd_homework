@@ -1,14 +1,33 @@
 package Football;
 
+import Controllers.GameController;
+import Entity.Coach;
+import Entity.Player;
+import Exceptions.NotNegativeDateException;
+import Exceptions.NotNegativeScoreException;
+
 public class Main {
     public static void main(String[] args) {
-        Date date = new Date(29, 5, 1985);
-        Score score = new Score(2, 1);
         GameController gameController = new GameController();
-        showBoard(score, date);
-        gameController.changeScore(2, 2, score);
-        showBoard(score, date);
-        gameController.changeDate(22, 12, 1899, date);
+        Score score = new Score(2, 1);
+        Date date = new Date(29, 5, 1985);
+        showBoard(score,date);
+        try {
+            gameController.changeScore(-2, 2, score);
+        } catch (NotNegativeScoreException e) {
+            System.out.println("error happened: " + e.getMessage());
+            score.setScoreTeamOne(0);
+            score.setScoreTeamTwo(0);
+        }
+        try {
+            gameController.changeDate(-1, 12, 1899, date);
+        } catch (NotNegativeDateException e1) {
+            System.out.println("error happened: " + e1.getMessage());
+            date.setDay(0);
+            date.setMonth(0);
+            date.setYear(0);
+        }
+        showBoard(score,date);
     }
 
     public static void showBoard(Score score, Date date) {

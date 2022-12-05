@@ -1,5 +1,5 @@
 package Football;
 
 public interface IAction {
-     String action();
+    String action();
 }
