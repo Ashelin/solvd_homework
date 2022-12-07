@@ -1,4 +1,4 @@
-package Football;
+package Entity;
 
 public class Commentator extends Person {
     private String broadcast;
