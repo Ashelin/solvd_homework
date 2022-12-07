@@ -1,6 +1,6 @@
 package Entity;
 
-import Football.IAction;
+import Interfaces.IAction;
 
 public class Coach extends Person implements IAction {
     private String team;

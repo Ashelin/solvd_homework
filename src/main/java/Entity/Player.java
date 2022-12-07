@@ -1,7 +1,7 @@
 package Entity;
 
-import Football.IAction;
-import Football.PlayerRole;
+import Interfaces.IAction;
+import Enums.PlayerRole;
 
 public class Player extends Person implements IAction {
     private PlayerRole role;
