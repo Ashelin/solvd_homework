@@ -1,4 +1,4 @@
-package Football;
+package Entity;
 
 import java.util.Objects;
 

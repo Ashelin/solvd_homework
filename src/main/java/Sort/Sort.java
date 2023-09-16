@@ -20,11 +20,12 @@ class Sort {
         showArray(arr);
     }
 
-    static void showArray(int[] arr){
+    static void showArray(int[] arr) {
         for (int j : arr) {
             System.out.print(j + " ");
         }
     }
+
     static void bubbleSort(int[] arr) {
         int temp = 0;
         for (int i = 0; i < arr.length; i++) {

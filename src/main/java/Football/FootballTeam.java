@@ -1,5 +1,7 @@
 package Football;
 
+import Interfaces.IAction;
+
 public class FootballTeam {
     private String teamName;
     private int estYear;
@@ -35,6 +37,14 @@ public class FootballTeam {
 
     public void setTeamCountry(String teamCountry) {
         this.teamCountry = teamCountry;
+    }
+
+    public IAction getCoach() {
+        return coach;
+    }
+
+    public void setCoach(IAction coach) {
+        this.coach = coach;
     }
 }
 

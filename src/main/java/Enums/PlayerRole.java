@@ -1,4 +1,4 @@
-package Football;
+package Enums;
 
 public enum PlayerRole {
     GOALKEEPER("Goalkeeper"), DEFENDER("Defender"), STRIKER("Striker"), CAPTAIN("Captain");

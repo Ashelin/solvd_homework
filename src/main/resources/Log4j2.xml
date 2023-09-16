@@ -1,0 +1,32 @@
+<Configuration>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n"/>
+        </Console>
+        <File name="file"
+              fileName="target/logs.log">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n"/>
+        </File>
+        <RollingFile
+                name="rollingFile"
+                fileName="target/append-logs.log"
+                filePattern="target/append-logs.%d{dd-MMM_HH-mm-ss}.log"
+                ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="error" additivity="false">
+<!--            <AppenderRef ref="console"/>-->
+            <AppenderRef ref="rollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
